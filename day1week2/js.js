@@ -36,7 +36,7 @@ const arr = [1, 2, 3, 4, 'hi', true]
 
 localStorage.setItem('anArray', JSON.stringify(arr))
 
-console.log(localStorage.getItem(JSON.stringify('anArray')))
+console.log(localStorage.getItem('anArray'))
 
 
 // task 8
@@ -61,3 +61,72 @@ localStorage.setItem('myName', 'Sami')
 localStorage.setItem('myName', 'khalid')
 
 console.log(localStorage.getItem('myName'))
+
+
+
+
+//task 1
+
+sessionStorage.setItem('ok', 'Hello, World')
+console.log(sessionStorage.getItem('ok'))
+
+
+
+// task 2
+
+sessionStorage.setItem('num', 123)
+console.log(sessionStorage.getItem('num'))
+
+
+//task 3
+
+sessionStorage.setItem('okok', true)
+console.log(sessionStorage.getItem('okok'))
+
+
+// task4
+
+sessionStorage.setItem('hi', 1111)
+sessionStorage.removeItem('hi')
+
+// task 5
+
+sessionStorage.clear()
+
+
+// task 6
+
+console.log(sessionStorage.getItem('check'))
+
+
+//task 7
+
+const arr2 = [1, 2, 3, 4, 'hi', true]
+
+sessionStorage.setItem('anArray', JSON.stringify(arr2))
+
+console.log(sessionStorage.getItem('anArray'))
+
+
+// task 8
+
+const obj2 = { name: 'omar', age: '22', place: 'jordan' }
+sessionStorage.setItem('anobject', (JSON.stringify(obj2)))
+console.log(sessionStorage.getItem('anobject'))
+
+
+//task 9 
+
+sessionStorage.setItem('company', 'Orange')
+sessionStorage.setItem('job', 'web developer')
+console.log(sessionStorage.getItem('company'))
+console.log(sessionStorage.getItem('job'))
+
+
+
+// task 10
+
+sessionStorage.setItem('myName', 'Sami')
+sessionStorage.setItem('myName', 'khalid')
+
+console.log(sessionStorage.getItem('myName'))
