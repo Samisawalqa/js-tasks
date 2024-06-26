@@ -17,9 +17,17 @@
                 // console.log(x)
                 for (let i = 0; i < x.length; i++) {
                     // console.log((x[i])[0], ':', (x[i])[1])
-                    user_address += `${(x[i])[0]}: ${((x[i])[1])}<br>`
+                    if (typeof ((x[i])[1]) === 'object') {
+                        let values = ((x[i])[1])
+                        user_address += `${(x[i])[0]}: ${Object.keys(values)[0]}: ${Object.values(values)[0]}, ${Object.keys(values)[1]}: ${Object.values(values)[1]}<br>`
+                    } else {
+                        user_address += `${(x[i])[0]}:${(x[i])[1]}<br>`
+
+                    }
                     // console.log(x[i].slice(1))
                 }
+                // console.log(...x[x.length - 1].slice(1))
+
                 box.innerHTML += `<h3>${user.name}</h3><p>username: ${user.username}<br> email: ${user.email}<br>${user_address}</p>`
             })
             document.querySelector('body').append(box)
